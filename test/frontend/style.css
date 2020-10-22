@@ -1,0 +1,79 @@
+body, ul, li, h1, h2, a
+{
+    margin: 0;
+    padding: 0;
+    font-family: Montserrat;
+}
+
+header
+{
+    text-align: center;
+    background-color: green;
+    position: fixed;
+    padding: 20px;
+    width: 100%;
+    z-index: 1;
+    left: 0;
+    top: 0;
+}
+
+h1
+{
+    color: white;
+    border: 5px solid white;
+    border-radius: 8px;
+    font-size: 25px;
+    padding: 10px;
+    display: inline-block;
+}
+
+
+.banner
+{
+    position: relative;
+}
+
+.banner img
+{
+    width: 100%;
+}
+
+.welcome
+{
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    top : 35%;
+    left: 0;
+    color: white;
+}
+
+nav
+{
+    background-color: violet;
+    padding: 20px;
+    position: sticky;
+    top: 90px;
+}
+
+nav ul
+{
+    white-space: nowrap;
+    margin: 0 auto;
+}
+
+nav li
+{
+    display: inline-block;
+    width: 25%;
+    z-index: 1;
+}
+
+footer
+{
+    text-align: center;
+    font-size: large;
+    background-color: green;
+    padding: .5px;
+    margin-bottom: 0;
+}
