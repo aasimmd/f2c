@@ -16,10 +16,16 @@ body
     margin: 0;
     height: 100vh;
     font-size: 1.6rem;
-    font-family: Montserrat, Arial, sans-serif;
+    font-family: Montserrat, Helvetica, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
+
+#root
+{
+    height: 100%;
+}
+
 
 h1
 {
@@ -27,7 +33,7 @@ h1
     padding: 1rem 0;
 }
 
-h1
+h2
 {
     font-size: 1.6rem;
     padding: 1rem 0;
@@ -50,9 +56,12 @@ a.brand
 /* header */
 header a
 {
-    color: green;
+    color: #8BC34A;
 }
-
+#cart
+{
+    padding-right: 1rem;
+}
 /* GRID */
 .grid-container
 {
@@ -69,7 +78,11 @@ header a
 header
 {
     grid-area: header;
-    background-color: grey;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    background-color: #212121;
+    box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.85);
+    z-index:1
 }
 
 main
@@ -83,8 +96,9 @@ main
 footer
 {
     grid-area: footer;
-    background-color: grey;
-    color: white;
+    background-color: #212121;
+    color:#8BC34A;
+    box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.85);
 }
 
 .row
@@ -100,10 +114,14 @@ footer
     justify-content: center;
 }
 
+
 /* IMAGES */
 img
 {
     border-radius: 0.5rem 0.5rem 0 0;
+    width: 300px;
+    height: 337px;
+    object-fit: cover;
 }
 img.medium
 {
@@ -112,11 +130,20 @@ img.medium
 }
 
 /* CARD */
+.card a
+{
+    color: white;
+}
+.card a:hover
+{
+    color: yellowgreen;
+}
 .card
 {
-    background-color: grey;
+    background-color: #212121;
     border-radius: 0.5rem;
     margin: 1rem;
+    box-shadow: 0px 0px 11px 3px rgba(0,0,0,0.80);
 }
 .card-body
 {

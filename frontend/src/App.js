@@ -1,4 +1,5 @@
-import logo from './logo.svg';
+import React from 'react';
+import data from './data';
 
 function App() {
   return (
@@ -9,7 +10,7 @@ function App() {
                 <a href="index.html" className='brand'>Farmer to Consumer</a>
             </div>
             <div>
-                <a href="cart.html">Cart</a>
+                <a id="cart" href="cart.html">Cart</a>
                 <a href="signin.html">Sign In</a>
             </div>
         </header>
@@ -17,93 +18,41 @@ function App() {
         <main>
             <div className="row center">
 
-                <div className="card">
+                {
+                    data.products.map((product)=>
+                    
+                        <div key={product._id} className="card">
 
-                    <a href="product.html">
-                        <img className='medium' src="./images/tomato.jpg" alt="tomato"/>
-                    </a>
+                            <a href={`/product/${product._id}`}>
+                                <img className='medium' src={product.image} alt={product.name}/>
+                            </a>
 
-                    <div className="card-body">
+                            <div className="card-body">
 
-                        <a href="product.html">
-                            <h2>Tomato</h2>
-                        </a>
+                                <a href={`/product/${product._id}`}>
+                                    <h2>{product.name}</h2>
+                                </a>
 
-                        <div className="rating">
-                            <span><i className="fa fa-star"></i></span>
-                            <span><i className="fa fa-star"></i></span>
-                            <span><i className="fa fa-star"></i></span>
-                            <span><i className="fa fa-star"></i></span>
-                            <span><i className="fa fa-star"></i></span>
+                                <div className="rating">
+                                    <span><i className="fa fa-star"></i></span>
+                                    <span><i className="fa fa-star"></i></span>
+                                    <span><i className="fa fa-star"></i></span>
+                                    <span><i className="fa fa-star"></i></span>
+                                    <span><i className="fa fa-star"></i></span>
+                                </div>
+
+                                <div className='price'>
+                                    ₹{product.price}/kg
+                                </div>
+                                
+                            </div>
+
                         </div>
 
-                        <div className='price'>
-                            30rs/kg
-                        </div>
-                        
-                    </div>
-
-                </div>
-
-
-                <div className="card">
-
-                    <a href="product.html">
-                        <img className='medium' src="./images/potato.jpg" alt="tomato"/>
-                    </a>
-
-                    <div className="card-body">
-
-                        <a href="product.html">
-                            <h2>Tomato</h2>
-                        </a>
-
-                        <div className="rating">
-                            <span><i className="fa fa-star"></i></span>
-                            <span><i className="fa fa-star"></i></span>
-                            <span><i className="fa fa-star"></i></span>
-                            <span><i className="fa fa-star"></i></span>
-                            <span><i className="fa fa-star"></i></span>
-                        </div>
-
-                        <div className='price'>
-                            30rs/kg
-                        </div>
-                        
-                    </div>
-
-                </div>
+                    )
+                }
 
                 
-                <div className="card">
-
-                    <a href="product.html">
-                        <img className='medium' src="./images/apple.jpg" alt="tomato"/>
-                    </a>
-
-                    <div className="card-body">
-
-                        <a href="product.html">
-                            <h2>Tomato</h2>
-                        </a>
-
-                        <div className="rating">
-                            <span><i className="fa fa-star"></i></span>
-                            <span><i className="fa fa-star"></i></span>
-                            <span><i className="fa fa-star"></i></span>
-                            <span><i className="fa fa-star"></i></span>
-                            <span><i className="fa fa-star"></i></span>
-                        </div>
-
-                        <div className='price'>
-                            30rs/kg
-                        </div>
-                        
-                    </div>
-
-                </div>
-
-
             </div>
         </main>
 
