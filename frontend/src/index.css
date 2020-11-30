@@ -80,8 +80,8 @@ header
     grid-area: header;
     padding-left: 1rem;
     padding-right: 1rem;
-    background-color: #212121;
-    box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.85);
+    background-color: #1f1f1f;
+    box-shadow: 0px 0px 15px 2px rgba(0,0,0,0.80);
     z-index:1
 }
 
@@ -96,9 +96,9 @@ main
 footer
 {
     grid-area: footer;
-    background-color: #212121;
+    background-color: #1f1f1f;
     color:#8BC34A;
-    box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.85);
+    box-shadow: 0px 0px 15px 2px rgba(0,0,0,0.80);
 }
 
 .row
@@ -143,7 +143,7 @@ img.medium
     background-color: #212121;
     border-radius: 0.5rem;
     margin: 1rem;
-    box-shadow: 0px 0px 11px 3px rgba(0,0,0,0.80);
+    box-shadow: 0px 0px 15px 3px rgba(0,0,0,0.80);
 }
 .card-body
 {
@@ -157,5 +157,10 @@ img.medium
 /* RATING */
 .rating span
 {
-    color: gold;
+    color: greenyellow;
+}
+
+.rating span:last-child
+{
+    color: white;
 }
