@@ -1,10 +1,21 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 import Rating from '../components/Rating';
-import data from '../data';
 
 const ProductScreen = (props) => {
     
-    const product = data.products.find((x)=> x._id === props.match.params.id);
+    const [products, setProducts] = useState([]);
+    //component didmount executes only ones | handler , dependencies
+    useEffect(()=>{
+        //ajax request
+        const fetchData = async ()=>{
+            const {data} = await axios.get('/api/products');
+            setProducts(data);
+        };
+        fetchData();
+    }, []);
+
+    const product = products.find((x)=> x._id === props.match.params.id);
 
     if(!product)
     {
@@ -60,7 +71,7 @@ const ProductScreen = (props) => {
                                         {
                                         product.countInStock>0 ?
                                         (<span className="success">In Stock</span>)
-                                        :(<span className="error">Unavailable</span>)
+                                        :(<span className="stockerr">Unavailable</span>)
                                         }
                                     </div>
                                 </div>
