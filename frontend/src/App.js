@@ -1,14 +1,19 @@
 import React from 'react';
-import Product from './components/Product';
-import data from './data';
+import {BrowserRouter, Link, Route} from 'react-router-dom';
+import HomeScreen from './pages/HomeScreen';
+import ProductScreen from './pages/ProductScreen';
 
 function App() {
   return (
+    <BrowserRouter>
     <div className="grid-container">
         
         <header className="row">
+            
             <div>
-                <a href="index.html" className='brand'>Farmer to Consumer</a>
+                <a className='brand'>
+                    <Link to="/">Farmer to Consumer</Link>
+                </a>
             </div>
             <div>
                 <a id="cart" href="cart.html">Cart</a>
@@ -17,18 +22,10 @@ function App() {
         </header>
 
         <main>
-            <div className="row center">
 
-                {
-                    data.products.map((product)=>
-                    
-                        <Product key={product._id} product={product}></Product>
+            <Route path="/product/:id" component={ProductScreen}></Route>
+            <Route path="/" component={HomeScreen} exact></Route>
 
-                    )
-                }
-
-                
-            </div>
         </main>
 
         <footer className='row center'>
@@ -36,6 +33,8 @@ function App() {
         </footer>
         
     </div>
+
+    </BrowserRouter>
   );
 }
 
