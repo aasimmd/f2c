@@ -1,4 +1,23 @@
+import bcrypt from 'bcryptjs';
+
 const data= {
+
+    //brycpt option 8 is autosalting
+    users :[
+        {
+            name:'Aasim',
+            email:'admin@gmail.com',
+            password: bcrypt.hashSync('1234', 8),
+            isAdmin: true,
+        },
+        {
+            name:'idk',
+            email:'user@gmail.com',
+            password: bcrypt.hashSync('1234', 8),
+            isAdmin: false,
+        },
+    ],
+
     products:[
         {
             _id : '1',
