@@ -5,6 +5,7 @@ import { signout } from './actions/userActions';
 import CartScreen from './pages/CartScreen';
 import HomeScreen from './pages/HomeScreen';
 import ProductScreen from './pages/ProductScreen';
+import RegisterScreen from './pages/RegisterScreen';
 import SigninScreen from './pages/SigninScreen';
 
 function App() {
@@ -60,6 +61,7 @@ function App() {
 
         <main>
 
+            <Route path="/register" component={RegisterScreen}></Route>
             <Route path="/signin" component={SigninScreen}></Route>
             <Route path="/cart/:id?" component={CartScreen}></Route>
             <Route path="/product/:id" component={ProductScreen}></Route>
