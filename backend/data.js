@@ -20,7 +20,6 @@ const data= {
 
     products:[
         {
-            _id : '1',
             name : "Tomato",
             category : "Vegetables",
             image : "/images/tomato.jpg",
@@ -33,7 +32,6 @@ const data= {
         },
 
         {
-            _id : '2',
             name : "Potato",
             category : "Vegetables",
             image : "/images/potato.jpg",
@@ -46,7 +44,6 @@ const data= {
         },
 
         {
-            _id : '3',
             name : "Apple",
             category : "Fruits",
             image : "/images/apple.jpg",
