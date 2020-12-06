@@ -1,6 +1,6 @@
 # FARMER TO CONSUMER  
 This is a web application built on MERN stack.  
-This web app is an ecommerce app for for farmers to sell groceries directly to the consumers.
+This web app is an ecommerce app for farmers to sell groceries directly to the consumers.
 
 # HOW TO RUN
 * Clone repository and change to root directory of the webapp.  
